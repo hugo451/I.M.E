@@ -1,0 +1,34 @@
+A metodologia top-down é um método de desenvolvimento de projetos que envolve a divisão do problema em partes menores e a criação de soluções para cada uma dessas partes, construindo o projeto de forma hierárquica. Vou guiá-lo pelo processo de projeto de um circuito lógico indicador de paridade síncrono de 4 bits usando a linguagem VHDL.
+
+Passo 1: Definir as especificações do projeto
+Antes de iniciar o projeto, é importante entender as especificações do circuito lógico indicador de paridade síncrono de 4 bits. Nesse caso, o circuito deve receber uma entrada de 4 bits e produzir uma saída que indique se o número de bits 1 na entrada é par ou ímpar.
+
+Passo 2: Dividir o projeto em módulos
+Na abordagem top-down, o próximo passo é dividir o projeto em módulos menores. Para esse circuito, podemos identificar dois módulos principais: um módulo que conta o número de bits 1 e outro módulo que verifica se o número é par ou ímpar.
+
+Passo 3: Implementar o módulo de contagem
+Começaremos implementando o módulo de contagem, que conta o número de bits 1 na entrada. Podemos usar flip-flops D para armazenar temporariamente os bits de entrada e adicionar a contagem sempre que encontrar um bit 1.
+
+Aqui está um exemplo de código VHDL para o módulo de contagem:
+
+ContadorParidade.VHDL
+
+Passo 4: Implementar o módulo de verificação de paridade
+Agora, podemos implementar o módulo de verificação de paridade. Este módulo recebe o valor de contagem do módulo anterior e verifica se é par ou ímpar. O resultado da verificação é atribuído à saída indicadora.
+
+Aqui está um exemplo de código VHDL para o módulo de verificação de paridade:
+
+IndicadorParidade.VHDL
+
+Passo 5: Testar o circuito
+Agora que temos os dois módulos implementados, podemos criar um novo módulo que instancia os módulos anteriores e conecta suas entradas e saídas.
+
+Aqui está um exemplo de código VHDL para o módulo de teste:
+
+teste.VHDL
+
+Neste exemplo de código, o sinal de entrada entrada é definido como "1010" para fins de teste. Você pode adicionar outros testes modificando o sinal entrada.
+
+Lembre-se de ajustar o nome das entidades e arquiteturas de acordo com os nomes que você definiu nos módulos anteriores.
+
+Essas são as etapas básicas para projetar um circuito lógico indicador de paridade síncrono de 4 bits usando a metodologia top-down e a linguagem VHDL. Lembre-se de sintetizar e simular o circuito para verificar seu funcionamento corretamente.
